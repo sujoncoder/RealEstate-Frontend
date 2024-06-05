@@ -135,7 +135,7 @@ export default function CreateListing() {
       setLoading(true);
       setError(false);
       const res = await fetch(
-        "https://real-state-backend-lovat.vercel.app/api/listing/create",
+        "https://real-state-backend-one.vercel.app/api/listing/create",
         {
           method: "POST",
           headers: {

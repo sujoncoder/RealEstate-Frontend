@@ -15,7 +15,7 @@ export default function OAuth() {
       const result = await signInWithPopup(auth, provider);
 
       const res = await fetch(
-        "https://real-state-backend-lovat.vercel.app/api/auth/google",
+        "https://real-state-backend-one.vercel.app/api/auth/google",
         {
           method: "POST",
           headers: {

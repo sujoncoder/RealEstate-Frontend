@@ -18,7 +18,7 @@ export default function SignUp() {
     try {
       setLoading(true);
       const res = await fetch(
-        "https://real-state-backend-lovat.vercel.app/api/auth/signup",
+        "https://real-state-backend-one.vercel.app/api/auth/signup",
         {
           method: "POST",
           headers: {

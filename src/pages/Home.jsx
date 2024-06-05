@@ -16,7 +16,7 @@ export default function Home() {
     const fetchOfferListings = async () => {
       try {
         const res = await fetch(
-          "https://real-state-backend-lovat.vercel.app/api/listing/get?offer=true&limit=4"
+          "https://real-state-backend-one.vercel.app/api/listing/get?offer=true&limit=4"
         );
         const data = await res.json();
         setOfferListings(data);
@@ -28,7 +28,7 @@ export default function Home() {
     const fetchRentListings = async () => {
       try {
         const res = await fetch(
-          "https://real-state-backend-lovat.vercel.app/api/listing/get?type=rent&limit=4"
+          "https://real-state-backend-one.vercel.app/listing/get?type=rent&limit=4"
         );
         const data = await res.json();
         setRentListings(data);
@@ -41,7 +41,7 @@ export default function Home() {
     const fetchSaleListings = async () => {
       try {
         const res = await fetch(
-          "https://real-state-backend-lovat.vercel.app/api/listing/get?type=sale&limit=4"
+          "https://real-state-backend-one.vercel.app/listing/get?type=sale&limit=4"
         );
         const data = await res.json();
         setSaleListings(data);

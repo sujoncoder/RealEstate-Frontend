@@ -68,7 +68,7 @@ export default function Profile() {
     try {
       dispatch(updateUserStart());
       const res = await fetch(
-        `https://real-state-backend-lovat.vercel.app/api/user/update/${currentUser._id}`,
+        `https://real-state-backend-one.vercel.app/api/user/update/${currentUser._id}`,
         {
           method: "POST",
           headers: {
@@ -94,7 +94,7 @@ export default function Profile() {
     try {
       dispatch(deleteUserStart());
       const res = await fetch(
-        `https://real-state-backend-lovat.vercel.app/api/user/delete/${currentUser._id}`,
+        `https://real-state-backend-one.vercel.app/api/user/delete/${currentUser._id}`,
         {
           method: "DELETE",
         }
@@ -114,7 +114,7 @@ export default function Profile() {
     try {
       dispatch(signOutUserStart());
       const res = await fetch(
-        "https://real-state-backend-lovat.vercel.app/api/auth/signout"
+        "https://real-state-backend-one.vercel.app/api/auth/signout"
       );
       const data = await res.json();
       if (data.success === false) {
@@ -131,7 +131,7 @@ export default function Profile() {
     try {
       setShowListingsError(false);
       const res = await fetch(
-        `https://real-state-backend-lovat.vercel.app/api/user/listings/${currentUser._id}`
+        `https://real-state-backend-one.vercel.app/api/user/listings/${currentUser._id}`
       );
       const data = await res.json();
       if (data.success === false) {
@@ -148,7 +148,7 @@ export default function Profile() {
   const handleListingDelete = async (listingId) => {
     try {
       const res = await fetch(
-        `https://real-state-backend-lovat.vercel.app/api/listing/delete/${listingId}`,
+        `https://real-state-backend-one.vercel.app/api/listing/delete/${listingId}`,
         {
           method: "DELETE",
         }

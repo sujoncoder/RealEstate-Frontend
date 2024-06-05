@@ -13,7 +13,7 @@ export default function Contact({ listing }) {
     const fetchLandlord = async () => {
       try {
         const res = await fetch(
-          `https://real-state-backend-lovat.vercel.app/api/user/${listing.userRef}`
+          `https://real-state-backend-one.vercel.app/api/user/${listing.userRef}`
         );
         const data = await res.json();
         setLandlord(data);

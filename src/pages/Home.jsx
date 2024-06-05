@@ -15,9 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const res = await fetch(
-          "https://real-state-backend-one.vercel.app/api/listing/get?offer=true&limit=4"
-        );
+        const res = await fetch("/api/listing/get?offer=true&limit=4");
         const data = await res.json();
         setOfferListings(data);
         fetchRentListings();
@@ -27,9 +25,7 @@ export default function Home() {
     };
     const fetchRentListings = async () => {
       try {
-        const res = await fetch(
-          "https://real-state-backend-one.vercel.app/listing/get?type=rent&limit=4"
-        );
+        const res = await fetch("/api/listing/get?type=rent&limit=4");
         const data = await res.json();
         setRentListings(data);
         fetchSaleListings();
@@ -40,9 +36,7 @@ export default function Home() {
 
     const fetchSaleListings = async () => {
       try {
-        const res = await fetch(
-          "https://real-state-backend-one.vercel.app/listing/get?type=sale&limit=4"
-        );
+        const res = await fetch("/api/listing/get?type=sale&limit=4");
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
@@ -69,7 +63,7 @@ export default function Home() {
           to={"/search"}
           className="text-xs sm:text-sm text-blue-800 font-bold hover:underline"
         >
-          Let s get started...
+          Let's get started...
         </Link>
       </div>
 
